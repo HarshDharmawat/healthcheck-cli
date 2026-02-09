@@ -13,6 +13,27 @@ A simple command-line tool written in Go to check whether a website (or service)
 
 Make sure you have **Go 1.18+** installed.
 
+Download dependencies:
+go mod tidy
+
+Usage
+
+Run the tool using:
+go run . --domain=google.com --port=443
+OR
+go run . -d google.com -p 443
+
+Example Output
+
+When the site is reachable:
+[UP] google.com is reachable,
+From: 192.168.1.5:51234
+To: google.com:443
+
+When the site is unreachable:
+[DOWN] example.com is unreachable,
+Error: dial tcp: lookup example.com: no such hos
+
 Clone the repository:
 
 ```bash
